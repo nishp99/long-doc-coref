@@ -139,7 +139,8 @@ def get_tokenized_doc(doc, tokenizer):
 
     split_into_segments(document_state, document_state.sentence_end, document_state.token_end)
     document = document_state.finalize()
-    return document
+    subtoken_maps = document_state.subtoken_map
+    return document, subtoken_maps 
 
 
 if __name__ == "__main__":
