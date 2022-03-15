@@ -22,7 +22,7 @@ class Inference:
 
     def perform_coreference(self, doc, doc_key="nw", num_sents=None):
         if isinstance(doc, str) or isinstance(doc, list):
-            tokenized_doc = get_tokenized_doc(doc, self.tokenizer)
+            tokenized_doc, _ = get_tokenized_doc(doc, self.tokenizer)
         elif isinstance(doc, dict):
             tokenized_doc = doc
         else:
